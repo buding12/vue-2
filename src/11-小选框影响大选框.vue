@@ -39,16 +39,10 @@ export default {
   },
   // 计算属性
   computed: {
-    isAll: {
-      set(val){
-        // 7. 全选框 - 选中状态(true/false)
-        this.arr.forEach(obj => obj.c = val)
-      },
-      get(){
-        // 6. 统计小选框状态 ->  全选状态
-        // every口诀: 查找数组里"不符合"条件, 直接原地返回false
-        return this.arr.every(obj => obj.c === true)
-      }
+    isAll() {
+      // 统计条件小选框 -》全选
+      // every口诀：查找数组里,不符合条件，直接返回false
+      return this.arr.every(obj=> obj.c === true)
     }
   }
 };
