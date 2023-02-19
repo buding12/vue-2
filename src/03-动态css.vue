@@ -23,5 +23,5 @@ export default {
 .red_str{
   color: blueviolet;
 }
-</style>>
+</style>
 
